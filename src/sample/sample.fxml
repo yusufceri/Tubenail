@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <TitledPane animated="false" text="TUBENAIL">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="500.0" prefWidth="700.0">
+               <children>
+                  <TabPane layoutX="-2.0" prefHeight="499.0" prefWidth="702.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab text="URL">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <SplitPane dividerPositions="0.4328571428571429" layoutX="-1.0" layoutY="56.0" prefHeight="392.0" prefWidth="702.0">
+                                      <items>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                             <children>
+                                                <Label layoutX="14.0" layoutY="76.0" prefHeight="17.0" prefWidth="107.0" text="Enter Youtube URL" />
+                                                <TextField id="EtxtYoutubeURL" fx:id="EtxtUrl" layoutX="14.0" layoutY="110.0" prefHeight="25.0" prefWidth="188.0" />
+                                                <Button id="BtnDownloadUrl" fx:id="BtnDownload" layoutX="212.0" layoutY="110.0" mnemonicParsing="false" onAction="#onDownloadNail" prefHeight="25.0" prefWidth="88.0" text="Download" />
+                                                <Label fx:id="TxtDestinationFolder" layoutX="14.0" layoutY="28.0" text="Label" />
+                                                <Button fx:id="BtnSelectDestFolder" layoutX="212.0" layoutY="24.0" mnemonicParsing="false" onAction="#onSelectDestFolder" prefHeight="25.0" prefWidth="87.0" text="Select Folder" />
+                                             </children>
+                                          </AnchorPane>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                             <children>
+                                                <ImageView id="ImgYoutubeThumbnail" fx:id="ImgViewNail" fitHeight="328.0" fitWidth="360.0" layoutX="17.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true" />
+                                             </children>
+                                          </AnchorPane>
+                                      </items>
+                                    </SplitPane>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab text="File">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <SplitPane dividerPositions="0.4328571428571429" layoutY="50.0" prefHeight="384.0" prefWidth="702.0">
+                                       <items>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                             <children>
+                                                <Label layoutX="14.0" layoutY="42.0" prefHeight="17.0" prefWidth="155.0" text="Select Youtube URL list file" />
+                                                <TextField layoutX="14.0" layoutY="72.0" prefHeight="25.0" prefWidth="181.0" />
+                                                <Button layoutX="201.0" layoutY="72.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="85.0" text="Download" />
+                                                <Pagination id="PaginationList" layoutX="14.0" layoutY="109.0" maxPageIndicatorCount="5" pageCount="10" prefHeight="252.0" prefWidth="274.0" />
+                                                <ListView layoutX="14.0" layoutY="109.0" prefHeight="200.0" prefWidth="275.0" />
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                             <children>
+                                                <ImageView fitHeight="328.0" fitWidth="360.0" layoutX="17.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true" />
+                                             </children>
+                                          </AnchorPane>
+                                       </items>
+                                    </SplitPane>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                    </tabs>
+                  </TabPane>
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+</GridPane>

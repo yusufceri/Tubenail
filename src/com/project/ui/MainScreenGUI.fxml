@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="469.0" prefWidth="754.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.ui.Controller">
+   <children>
+      <Pane layoutX="-4.0" layoutY="1.0" prefHeight="469.0" prefWidth="754.0">
+         <children>
+   
+                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="462.0" prefWidth="754.0">
+                        <children>
+                           <SplitPane dividerPositions="0.39652677279305354" layoutY="2.0" prefHeight="462.0" prefWidth="754.0">
+                             <items>
+                               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="463.0" prefWidth="295.0">
+                                    <children>
+                                       <Label fx:id="TxtDestinationFolder" layoutX="10.0" layoutY="42.0" prefHeight="14.0" prefWidth="176.0" text="Folder Path" textFill="#1a0b75" wrapText="true" />
+                                       <Button layoutX="194.0" layoutY="38.0" mnemonicParsing="false" onAction="#onSelectDestFolder" prefHeight="22.0" prefWidth="73.0" text="Select Folder" textFill="#6d6e3a" wrapText="true">
+                                          <font>
+                                             <Font size="10.0" />
+                                          </font>
+                              </Button>
+                                       <Label layoutX="8.0" layoutY="99.0" text="Download Source" textFill="#3cd01e">
+                                          <font>
+                                             <Font size="9.0" />
+                                          </font>
+                              </Label>
+                                       <TextField fx:id="EtxtUrl" layoutX="20.0" layoutY="145.0" prefHeight="22.0" prefWidth="175.0" promptText="Enter Youtube URL">
+                                          <font>
+                                             <Font size="9.0" />
+                                          </font>
+                              </TextField>
+                                       <Button fx:id="BtnDownload" layoutX="202.0" layoutY="146.0" mnemonicParsing="false" onAction="#onDownloadNail" text="Download" textFill="#6d6e3a" wrapText="true">
+                                          <font>
+                                             <Font size="10.0" />
+                                          </font>
+                              </Button>
+                                       <Separator layoutX="8.0" layoutY="68.0" prefHeight="4.0" prefWidth="285.0" />
+                                       <Separator layoutX="107.0" layoutY="30.0" prefHeight="4.0" prefWidth="184.0" />
+                                       <Label layoutX="9.0" layoutY="20.0" prefHeight="14.0" prefWidth="101.0" text="Select Destination Folder" textFill="#3cd01e">
+                                          <font>
+                                             <Font size="9.0" />
+                                          </font>
+                                       </Label>
+                                       <Separator layoutX="84.0" layoutY="112.0" prefHeight="1.0" prefWidth="207.0" />
+                                       <Separator layoutX="9.0" layoutY="174.0" prefHeight="3.0" prefWidth="283.0" />
+                                       <RadioButton fx:id="RBSmall" layoutX="17.0" layoutY="225.0" mnemonicParsing="false" onAction="#onImageQualityLOW" selected="true" text="SMALL" textFill="#5b5b0e">
+                                          <toggleGroup>
+                                             <ToggleGroup fx:id="radioGroup" />
+                                          </toggleGroup>
+                                       </RadioButton>
+                                       <RadioButton fx:id="RBStandard" layoutX="84.0" layoutY="225.0" mnemonicParsing="false" onAction="#onImageQualitySTANDARD" text="STANDARD" textFill="#5b5b0e" toggleGroup="$radioGroup" />
+                                       <RadioButton fx:id="RBLarge" layoutX="186.0" layoutY="225.0" mnemonicParsing="false" onAction="#onImageQualityLARGE" text="LARGE" textFill="#5b5b0e" toggleGroup="$radioGroup" />
+                                       <Separator layoutX="97.0" layoutY="211.0" prefHeight="3.0" prefWidth="194.0" />
+                                       <Label layoutX="10.0" layoutY="203.0" text="Select Image Qualıty" textFill="#3cd01e">
+                                          <font>
+                                             <Font size="9.0" />
+                                          </font>
+                                       </Label>
+                                       <Separator layoutX="3.0" layoutY="250.0" prefHeight="4.0" prefWidth="291.0" />
+                              <Button fx:id="BtnSelectSourceFile" disable="true" layoutX="202.0" layoutY="122.0" mnemonicParsing="false" onAction="#onSelectDownloadSourceFileChooser" prefHeight="17.0" prefWidth="75.0" text="Select URL File" textFill="#5b5b0e">
+                                 <font>
+                                    <Font name="System Italic" size="9.0" />
+                                 </font></Button>
+                              <RadioButton fx:id="RBURL" layoutX="12.0" layoutY="124.0" mnemonicParsing="false" onAction="#onSelectDownloadSourceURL" selected="true" text="URL" textFill="#5b5b0e" toggleGroup="$radioGroupSelect">
+                                 <font>
+                                    <Font name="System Bold Italic" size="9.0" />
+                                 </font>
+                                  <toggleGroup>
+                                      <ToggleGroup fx:id="radioGroupSelect" />
+                                  </toggleGroup>
+                              </RadioButton>
+                              <RadioButton fx:id="RBSelectFile" layoutX="76.0" layoutY="124.0" mnemonicParsing="false" onAction="#onSelectDownloadSourceFile" text="Select File" textFill="#5b5b0e" toggleGroup="$radioGroupSelect">
+                                 <font>
+                                    <Font name="System Bold Italic" size="9.0" />
+                                 </font>
+                              </RadioButton>
+
+                                        <Pagination fx:id="PageUrlName" disable="true" layoutX="24.0" layoutY="254.0" maxPageIndicatorCount="1" pageCount="3" prefHeight="200.0" prefWidth="231.0" />
+
+                                    </children>
+                                 </AnchorPane>
+                               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="445.0" prefWidth="451.0">
+                                    <children>
+                                       <ImageView fx:id="ImgViewNail" fitHeight="323.0" fitWidth="430.0" layoutX="2.0" layoutY="59.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" x="12.0">
+                                 <viewport>
+                                    <Rectangle2D />
+                                 </viewport></ImageView>
+                                       <ProgressIndicator fx:id="PBDownload" layoutX="199.0" layoutY="162.0" opacity="0.6" prefHeight="82.0" prefWidth="87.0" progress="0.0" visible="false" />
+                                       <ProgressBar fx:id="PBDownloadImage" layoutX="126.0" layoutY="113.0" prefWidth="200.0" progress="0.0" visible="false" />
+                                    </children>
+                                 </AnchorPane>
+                             </items>
+                           </SplitPane>
+                        </children>
+                     </AnchorPane>
+         </children>
+
+      </Pane>
+   </children>
+</Pane>
